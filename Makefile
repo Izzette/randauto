@@ -1,11 +1,11 @@
 randauto:
-	gcc -Wall -Ofast -shared -o randauto.so lib/randauto.c
+	gcc -Wall -Ofast -shared -o librandauto.so lib/randauto.c
 
 randauto-local:
 	gcc -Wall -Ofast -c lib/randauto.c
 
 randauto-install:
-	cp randauto.so /usr/lib/randauto.so
+	cp librandauto.so /usr/lib/librandauto.so
 	cp randauto.h /usr/include/randauto.h
 
 randbytes:
@@ -19,8 +19,6 @@ randbytes-install:
 
 all-local: randauto-local randbytes-local
 
-all-install: randauto-install randbytes randbytes-install
-
 clean:
-	rm randauto.so randauto.o randbytes &> /dev/null
+	rm -f librandauto.so randauto.o randbytes &> /dev/null
 

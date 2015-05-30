@@ -7,7 +7,7 @@
 
 int main (int argc, char *argv[]) {
 	if (4 != argc) {
-		printf ("ERROR: Specified %d arguments, requires exactly 3 arguments, ex: `./main <bit_cnt> <iter> <outfile/->`\n", argc - 1);
+		printf ("ERROR: Specified %d arguments, requires exactly 3 arguments, ex: `randbytes <bit_cnt> <iter> <outfile/->`\n", argc - 1);
 		return 1;
 	}
 
