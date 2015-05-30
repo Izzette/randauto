@@ -9,10 +9,10 @@ randauto-install:
 	cp randauto.h /usr/include/randauto.h
 
 randbytes:
-	gcc -Wall -Ofast -lgmp -lrandauto -o randbytes randbytes.c
+	gcc -Wall -Ofast -lrandauto -o randbytes randbytes.c
 
 randbytes-local:
-	gcc -Wall -Ofast -lgmp randauto.o randauto.h -o randbytes randbytes.c
+	gcc -Wall -Ofast randauto.o randauto.h -o randbytes randbytes.c
 
 randbytes-install:
 	cp randbytes /usr/bin/randbytes

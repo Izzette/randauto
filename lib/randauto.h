@@ -1,7 +1,5 @@
 #include <time.h>
 
-#include <gmp.h>
-
 void ra_init_rule (unsigned long rule_num);
 
 int ra_init_auto (int bit_cnt);
@@ -13,6 +11,4 @@ void ra_step (unsigned int step);
 
 char *ra_string ();
 unsigned char *ra_bytes ();
-
-void ra_mpz (mpz_t mrep);
 

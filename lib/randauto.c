@@ -1,8 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include <gmp.h>
-
 #include "randauto.h"
 
 #define __RA_RULE_DEFAULT 1436965290UL
@@ -120,18 +118,5 @@ unsigned char *ra_bytes () {
 	brep[mem_len - 1] = '\0';
 
 	return brep;
-}
-
-void ra_mpz (mpz_t mrep) {
-	mpz_t tmp;
-	mpz_init (tmp);
-
-	int i;
-	for (i = 0; __ra_Len_Automaton > i; ++i) {
-		mpz_add_ui (tmp, mrep, (unsigned long)__ra_Automaton[i]);
-		mpz_swap (mrep, tmp);
-	}
-
-	mpz_clear (tmp);
 }
  
